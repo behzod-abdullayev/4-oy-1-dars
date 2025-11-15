@@ -160,3 +160,103 @@
 // console.log(p1.name);
 // console.log(p1.surname);
 // console.log(p1.age);
+
+
+
+// 1-masala (leetcode)
+// https://leetcode.com/problems/median-of-two-sorted-arrays/
+
+// function findMedianSortedArrays(nums1, nums2) {
+//     let res1 = nums1.concat(nums2).sort((a,b) => a-b);
+//     let len = res1.length;
+//     let mid = Math.floor(len / 2);
+
+//     if (len % 2 === 1) {
+//         return res1[mid];
+//     } else {
+//         return (res1[mid - 1] + res1[mid]) / 2;
+//     }
+// }
+// console.log(findMedianSortedArrays([1, 3, 2], [1, 3, 3]));
+
+
+
+// 2-masala (leetcode)
+// https://leetcode.com/problems/number-complement/
+
+// function findComplement(num) {
+//     let mask = 1;
+//     while (mask <= num) {
+//         mask = mask * 2;
+//     }
+//     return mask - 1 - num;
+// }
+// console.log(findComplement(5));
+
+
+
+// 3-masala (leetcode)
+// https://leetcode.com/problems/reverse-vowels-of-a-string/
+
+// function reverseVowels(s) {
+//     const vowels = "aeiouAEIOU";
+//     const result = s.split('');
+//     let left = 0;
+//     let right = result.length - 1;
+//     while (left < right) {
+//         while (left < right && vowels.indexOf(result[left]) === -1) {
+//             left++;
+//         }
+//         while (left < right && vowels.indexOf(result[right]) === -1) {
+//             right--;
+//         }
+//         if (left < right) {
+//             const temp = result[left];
+//             result[left] = result[right];
+//             result[right] = temp;
+//             left++;
+//             right--;
+//         }
+//     }
+//     return result.join('');
+// }
+// console.log(reverseVowels("hello"));
+
+
+
+// 4-masala (leetcode)
+// https://leetcode.com/problems/valid-parentheses/
+
+// function isValid(s) {
+//     const obj = { '(': ')', '[': ']', '{': '}' };
+//     const result = [];
+//     for (let i of s) {
+//         if (obj[i]) {
+//             result.push(obj[i]);
+//         } else {
+//             if (result.pop() !== i) {
+//                 return false;
+//             }
+//         }
+//     }
+//     return result.length === 0;
+// }
+// console.log(isValid("()"));
+
+
+
+// 5-masala
+// https://leetcode.com/problems/climbing-stairs/
+
+// function climbStairs(n) {
+//     if (n === 1) return 1;
+//     let a = 1;
+//     let b = 2;
+//     for (let i = 3; i <= n; i++) {
+//         let c = a + b;
+//         a = b;
+//         b = c;
+//     }
+//     return b;
+// }
+// console.log(climbStairs(2));
